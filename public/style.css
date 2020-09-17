@@ -1,0 +1,44 @@
+
+.view-border
+{
+    border: 1px solid white;
+}
+.product-img
+{
+    height: 200px;
+    width:  200px;
+    cursor: pointer;
+    position: relative;
+}
+.product-title
+{
+  cursor: pointer;
+}
+.size
+{
+  border: 1px solid white;
+
+}
+.addto-btn
+{
+  position: relative;
+  background-color: pink;
+  margin-right: 5px;
+}
+.size
+{
+  border: 1px solid white;
+  position: relative;
+}
+.header-title
+{
+  margin-left: 10px;
+}
+.size-btn
+{
+  border-radius: 50%;
+  border: 1px solid gray;
+  padding: 10px;
+  margin-left: 10px;
+}
+

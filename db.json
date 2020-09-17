@@ -1,0 +1,55 @@
+{
+        "products": [
+            {
+                "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSePezIuBmD_laW0BI_3MKITKxhGKiPdnGVoQ&usqp=CAU",
+                "name": "Vero Moda",
+                "description" :"Women Regular Fit",
+                "price": 110,
+                "id":1,
+                 "size": ["XS", "S", "M", "L"]
+            },
+            {
+                "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSePezIuBmD_laW0BI_3MKITKxhGKiPdnGVoQ&usqp=CAU",
+                "name": "Vero Moda",
+                "description" :"Women Regular Fit",
+                "price": 110,
+                "id":2,
+                "size": ["XS", "S", "M", "L"]
+            },
+            {
+                "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSePezIuBmD_laW0BI_3MKITKxhGKiPdnGVoQ&usqp=CAU",
+                "name": "Vero Moda",
+                "description" :"Women Regular Fit",
+                "price": 110,
+                "id":3,
+                "size": ["XS", "S", "M", "L"]
+            },
+            {
+                "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSePezIuBmD_laW0BI_3MKITKxhGKiPdnGVoQ&usqp=CAU",
+                "name": "Vero Moda",
+                "description" :"Women Regular Fit",
+                "price": 110,
+                "id":4,
+                "size": ["XS", "S", "M", "L"]
+            },
+            {
+                "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSePezIuBmD_laW0BI_3MKITKxhGKiPdnGVoQ&usqp=CAU",
+                "name": "Vero Moda",
+                "description" :"Women Regular Fit",
+                "price": 110,
+                "id":5,
+                "size": ["XS", "S", "M", "L"]
+            },
+            {
+                "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSePezIuBmD_laW0BI_3MKITKxhGKiPdnGVoQ&usqp=CAU",
+                "name": "Vero Moda",
+                "description" :"Women Regular Fit",
+                "price": 110,
+                "id":6,
+                "size": ["XS", "S", "M", "L"]
+            }
+           
+   
+    ]
+
+    }
