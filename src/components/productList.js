@@ -7,7 +7,7 @@ class ProductList extends Component {
         super(props);
         this.state = {
             productList: "",
-            imgClick: false, id: '',
+            imgClick: false, id: '', colorChange: false, index: ''
         }
 
     }
@@ -30,59 +30,64 @@ class ProductList extends Component {
         this.setState({ id: id });
         if (this.state.imgClick)
             this.setState({ imgClick: !this.state.imgClick })
-
     }
     sizeShow = (id) => {
-        this.setState({ imgClick: !this.state.imgClick, id: id });
-        console.log(id)
+        this.setState({ imgClick: !this.state.imgClick, id: id,colorChange:false });
     }
-
+    changeColorFunc(index) {
+        this.setState({ colorChange: true, index: index });
+    }
 
     render() {
         let { productList, id } = this.state;
         return (
+            <div className="container">
+                <div className="root-1">
+                    <div className="row" id="scroll-container-1">
+                        {
+                            productList && productList.map((product, key) => {
+                                return (
+                                    <div className="col-md-2" id="scroll-1" key={key}>
+                                        {/* <div className="scroll-view-container"> */}
+                                        <img alt="" src={product.imgUrl} className="product-img" onMouseEnter={() => this.buttonShow(product.id)} />
+                                        {
+                                            product.id === id ?
+                                                <div id="button">
+                                                    <button type="button" className="btn addto-btn" onClick={() => this.sizeShow(product.id)}>ADD TO BAG</button>
+                                                    <button className="btn wishlist-btn" type="button" onClick={() => this.sizeShow(product.id)}> WISHLIST</button>
+                                                    {
+                                                        product.id === id && this.state.imgClick ?
+                                                            <div className="size">
+                                                                <h5 className="header-title">Select Size</h5>
+                                                                <div className="col-md-12">
+                                                                    {
+                                                                        product.size.map((sizes, index) => {
+                                                                            return (
 
-            <div className="row">
+                                                                                <button key={index} className="size-btn" style={this.state.colorChange && index === this.state.index ? { backgroundColor: "pink",borderColor:'pink' } : null} onClick={() => this.changeColorFunc(index)}>{sizes} </button>)
+                                                                        })}
 
-                {
-                    productList && productList.map((product, key) => {
-                        return (
-                            <div className="col-md-2 view-border card-cat">
-                                <img alt="" src={product.imgUrl} className="product-img" onMouseEnter={() => this.buttonShow(product.id)} />
-                                {
-                                    product.id === id ?
-                                        <div>
-                                            <button type="button" className="btn addto-btn" onClick={() => this.sizeShow(product.id)}>ADD TO BAG</button>
-                                            <button className="btn wishlist-btn" type="button" onClick={() => this.sizeShow(product.id)}> WISHLIST</button>
-                                            {
-                                                product.id === id && this.state.imgClick ?
-                                                    <div className="row size">
-                                                        <h4 className="header-title">Select Size</h4>
-                                                        <div className="col-md-12">
-                                                            {
-                                                                product.size.map(sizes => {
-                                                                    return (<button className="size-btn">{sizes} </button>)
-                                                                })}
+                                                                </div>
+                                                            </div>
 
-                                                        </div>
-                                                    </div>
+                                                            : null
+                                                    }
+                                                </div>
 
-                                                    : null
-                                            }
-
-                                        </div>
-                                        : null
-                                }
-                                <h2 className="product-title">{product.name}</h2>
-                                <p>{product.description}</p>
-                                <p>{product.price}</p>
-                            </div>
-                        )
-                    }
-                    )
-                }
+                                                : null
+                                        }
+                                        <h2 className="product-title">{product.name}</h2>
+                                        <p>{product.description}</p>
+                                        <p>{product.price}</p>
+                                    </div>
+                                    // </div>
+                                )
+                            }
+                            )
+                        }
+                    </div>
+                </div>
             </div>
-
 
 
         );
